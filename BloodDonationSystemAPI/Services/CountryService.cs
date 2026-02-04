@@ -56,7 +56,7 @@ namespace BloodDonationSystemAPI.Services
         }
 
 
-        public async Task<bool> UpdateCountryAsync(int id, CreateCountryRequest country)
+        public async Task<bool> UpdateCountryAsync(int id, UpdateCountryRequest country)
         {
             var existingCountry = await context.Countries.FindAsync(id);
             if (existingCountry == null)

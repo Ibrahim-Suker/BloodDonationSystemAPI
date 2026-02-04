@@ -40,14 +40,14 @@ namespace BloodDonationSystemAPI.Controllers
 
 
         [HttpPut("{id}")]
-        public async Task<ActionResult> UpdateCountry(int id, CreateCountryRequest country)
+        public async Task<ActionResult<CountryResponse>> UpdateCountry(int id, UpdateCountryRequest country)
         {
             var isUpdated = await countryService.UpdateCountryAsync(id, country);
-            return isUpdated ? NoContent() : NotFound($"Country with id {id} not found");
+            return isUpdated ? Ok(country) : NotFound($"Country with id {id} not found");
         }
 
 
-        [HttpDelete("{id}")]
+    [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteCountry(int id)
         {
             var isDeleted = await countryService.DeleteCountryAsync(id);

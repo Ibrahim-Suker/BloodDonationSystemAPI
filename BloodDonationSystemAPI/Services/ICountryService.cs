@@ -8,7 +8,7 @@ namespace BloodDonationSystemAPI.Services
         Task<List<CountryResponse>> GetAllCountriesAsync();
         Task<CountryResponse?> GetCountryByIdAsync(int id);
         Task<CountryResponse> AddCountryAsync(CreateCountryRequest country);
-        Task<bool> UpdateCountryAsync(int id, CreateCountryRequest country);
+        Task<bool> UpdateCountryAsync(int id, UpdateCountryRequest country);
         Task<bool> DeleteCountryAsync(int id);
     }
 }
