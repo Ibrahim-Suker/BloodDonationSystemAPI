@@ -13,6 +13,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 );
 
 builder.Services.AddScoped<ICountryService, CountryService>();
+builder.Services.AddScoped<ICityService, CityService>();
 
 
 // Swagger / OpenAPI services
