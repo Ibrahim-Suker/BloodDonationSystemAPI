@@ -1,23 +1,16 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BloodDonationSystemAPI.Models
 {
-    public class City
+    public class BloodGroup
     {
         [Key]
         public int Id { get; set; }
 
         [Required]
-        public string Name { get; set; } = string.Empty;
-
-        public int CountryId { get; set; }
-
-        [ForeignKey(nameof(CountryId))]
-        public Country Country { get; set; } = null!;
+        public string GroupName { get; set; }= string.Empty;
 
         public ICollection<BloodRequest> BloodRequests { get; set; } = new List<BloodRequest>();
 
     }
-
 }
