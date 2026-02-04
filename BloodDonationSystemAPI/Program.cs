@@ -15,6 +15,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddScoped<ICountryService, CountryService>();
 builder.Services.AddScoped<ICityService, CityService>();
 builder.Services.AddScoped<IBloodGroupService, BloodGroupService>();
+builder.Services.AddScoped<IBloodRequestService, BloodRequestService>();
 
 
 // Swagger / OpenAPI services
